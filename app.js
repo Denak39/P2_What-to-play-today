@@ -56,13 +56,6 @@ app.use("/", require("./routes/index"));
 app.use("/", require("./routes/users"));
 app.use("/", require("./routes/auth"));
 
-//
-app.get("/", (req, res) => {
-  res.render("home", {
-    pageTitle: "Homepage",
-  });
-});
-
 app.get("/settings", (req, res) => {
   res.render("settings", {
     pageTitle: "settings",
@@ -70,11 +63,10 @@ app.get("/settings", (req, res) => {
   });
 });
 
-app.get("/recommend", (req, res) => {
-  res.render("recommend", {
-    pageTitle: "Recommend",
-  });
-});
-//
+// app.get("/recommend", (req, res) => {
+//   res.render("recommend", {
+//     pageTitle: "Recommend",
+//   });
+// });
 
 module.exports = app;
