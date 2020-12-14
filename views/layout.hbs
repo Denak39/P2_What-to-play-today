@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link(rel='stylesheet', href='/stylesheets/style.css')>
-    {{!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> --}}
-    <title>Document</title>
-  </head>
-  <body>
 
-    {{{body}}}
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Games Website - {{ pageTitle }}</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://kit.fontawesome.com/a03fdcc63b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+  <section id="section-nav">
+    <header>
+      <nav id="navbar">
+        <div class="nav-left">
+          <img src="/images/Main-Page-Icons/console.png" alt="Console-Image" />
+          <p>What do I play today, blin?!</p>
+        </div>
+
+        <div class="nav-right">
+          <ul id="navbar-links">
+            <li>
+              <a href="settings"><img src="/images/Main-Page-Icons/Sign-In.png" alt="Sign-In-Icon" />
+                Sign In</a>
+            </li>
+            <li>
+              <a href="#"><img src="/images/Main-Page-Icons/Login.png" alt="Login-Icon" />
+                Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </section>
+
+  {{{body}}}
+
+</body>
+
 </html>

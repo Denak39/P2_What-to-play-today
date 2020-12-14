@@ -56,4 +56,24 @@ app.use("/", require("./routes/index"));
 app.use("/", require("./routes/users"));
 app.use("/", require("./routes/auth"));
 
+//
+app.get("/", (req, res) => {
+  res.render("home", {
+      pageTitile: "Homepage"
+  });
+});
+
+app.get("/settings", (req, res) => {
+  res.render('settings', { 
+      pageTitle: 'settings', layout: 'layout2' });
+});
+
+
+app.get("/recommendation", (req, res) => {
+  res.render("recommendation", {
+      pageTitile: "Recommendation"
+  });
+});
+//
+
 module.exports = app;
