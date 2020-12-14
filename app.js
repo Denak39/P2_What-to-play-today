@@ -59,19 +59,20 @@ app.use("/", require("./routes/auth"));
 //
 app.get("/", (req, res) => {
   res.render("home", {
-      pageTitile: "Homepage"
+    pageTitle: "Homepage",
   });
 });
 
 app.get("/settings", (req, res) => {
-  res.render('settings', { 
-      pageTitle: 'settings', layout: 'layout2' });
+  res.render("settings", {
+    pageTitle: "settings",
+    layout: "layout2",
+  });
 });
 
-
-app.get("/recommendation", (req, res) => {
-  res.render("recommendation", {
-      pageTitile: "Recommendation"
+app.get("/recommend", (req, res) => {
+  res.render("recommend", {
+    pageTitle: "Recommend",
   });
 });
 //
