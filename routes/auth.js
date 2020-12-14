@@ -59,3 +59,5 @@ router.get("/logout", async (req, res, next) => {
     res.redirect("/signin");
   });
 });
+
+module.exports = router;

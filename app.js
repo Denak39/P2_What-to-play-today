@@ -1,6 +1,15 @@
 require("dotenv").config();
 require("./config/mongo"); // database initial setup
 require("./helpers/hbs"); // utils for hbs templates
+// const RawgAPIURL = require("https://rawg.io/api/games");
+// const app = express();
+// const rawgAPI = new RawgAPIURL();
+
+// const RAWGAPI_REQUEST_HEADERS = {
+//   // "X-RawgAPI-Host": "arjunkomath-jaas-json-as-a-service-v1.p.rapidapi.com",
+//   "X-RawgAPI-Key": "41b366e5554b479eadd2ade97194736e",
+//   "Content-Type": "application/json",
+// };
 
 var createError = require("http-errors");
 var express = require("express");
@@ -44,7 +53,7 @@ app.use(function (err, req, res, next) {
 });
 //routes
 app.use("/", require("./routes/index"));
-app.use("/", require("./routes/dashboard_sneaker"));
+app.use("/", require("./routes/users"));
 app.use("/", require("./routes/auth"));
 
 module.exports = app;
