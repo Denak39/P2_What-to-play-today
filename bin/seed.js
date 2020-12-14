@@ -14,8 +14,8 @@ const games = [
     image:
       "https://media.senscritique.com/media/000017816998/source_big/Metal_Gear_Solid.png",
     price: 9.99,
-    category: "action", "shooter", "infiltration",
-    id_tags: "",
+    category: "action, shooter, infiltration",
+    // id_tags: "",
   },
   {
     name: "Animal Crossing: New Horizons",
@@ -25,8 +25,8 @@ const games = [
     image:
       "https://s1.gaming-cdn.com/images/products/4809/orig/animal-crossing-new-horizons-switch-cover.jpg",
     price: 59.99,
-    category: "RPG", "adventure",
-    id_tags: "",
+    category: "RPG, adventure",
+    // id_tags: "",
   },
   {
     name: "Cyberpunk 2077",
@@ -35,19 +35,19 @@ const games = [
       "Cyberpunk 2077 is a science fiction game loosely based on the role-playing game Cyberpunk 2020.      The game is set in the year 2077 in a fictional futuristic metropolis Night City in California. In the world of the game, there are developed cybernetic augmentations that enhance people's strength, agility, and memory. The city is governed by corporations. Many jobs are taken over by the robots, leaving a lot of people poor and homeless. Night City has a roaring underworld, with black markets, underground surgeons, drug dealers, and street gangs abound. The main protagonist is fully customizable, including his or her sex and appearance, and goes by the nickname V. He or she is an underground mercenary who does `dirty business` for the various contractors. An NPC companion named Jackie joins the protagonist early at the game, and various other companions may join the player on certain missions as the plot demands. However, the game has no parties and no companion system. The player controls V from the first person view, with the third-person view used for cutscenes only. The protagonist can travel across the city on feet or using various vehicles, in a manner some observers compared to GTA series. There are many options for the character customization, including three character classes, and a variety of augmentations V can install to enhance his or her abilities.",
     image: "https://images.igdb.com/igdb/image/upload/t_1080p/co1rft.jpg",
     price: 69.99,
-    category: "action", "shooter", "infiltration", "adventure", "RPG",
-    id_tags: "",
+    category: "action, shooter,infiltration, adventure, RPG",
+    // id_tags: "",
   },
   {
     name: "Shadow of the Tomb Raider",
-    platform: ["Playstation", "PC", "Xbox", "Linux", "Mac"],
+    platform: ["Playstations", "PC", "Xbox"],
     description:
       "Experience Lara Croft's defining moment as she becomes the Tomb Raider. In Shadow of the Tomb Raider, Lara must master a deadly jungle, overcome terrifying tombs, and persevere through her darkest hour. As she races to save the world from a Maya apocalypse, Lara will ultimately be forged into the Tomb Raider she is destined to be. Survive and Thrive In the Deadliest Place on Earth: Master an unforgiving jungle setting in order to survive. Explore underwater environments filled with crevasses and deep tunnel systems. Become One With the Jungle: Lara must use the jungle to her advantage to strike suddenly and disappear like a jaguar, use mud as camouflage, and instill fear in enemies to sow chaos. Discover Brutal Tombs: Terrifying tombs, filled with deadly puzzles, require advanced traversal techniques to be accessed. Uncover Living History: Discover a hidden city and explore the biggest Tomb Raider hub ever.",
     image:
       "https://flitcha.com/wp-content/uploads/2020/05/2b2a4aa095bd0eade2854c4b929642a9_390x400_1x-0.jpg",
     price: 39.99,
-    category: "action", "adventure",
-    id_tags: "",
+    category: "action, adventure",
+    // id_tags: "",
   },
   {
     name: "Forza Horizon 4",
@@ -57,18 +57,18 @@ const games = [
     image: "https://gameroom.lt/14052/forza-horizon-4.jpg",
     price: 59.99,
     category: "racing",
-    id_tags: "",
+    // id_tags: "",
   },
   {
     name: "Crash Bandicoot N. Sane Trilogy",
-    platform: ["Playstation", "PC"],
+    platform: ["Playstations", "PC"],
     description:
       "Your favorite marsupial, Crash Bandicoot™, is back! He's enhanced, entranced and ready-to-dance with the N. Sane Trilogy game collection. Now you can experience Crash Bandicoot like never before. Spin, jump, wump and repeat as you take on the epic challenges and adventures through the three games that started it all, Crash Bandicoot™, Crash Bandicoot™ 2: Cortex Strikes Back and Crash Bandicoot™ 3: Warped. Relive all your favorite Crash moments in their fully-remastered graphical glory and get ready to put some UMPH in your WUMP!Crash Bandicoot™ N.Experience the notorious Stormy Ascent level from the original Crash Bandicoot game. Previously unfinished and unreleased, this level will challenge even the most hardcore of Crash fans! Do you have what it takes to tackle the fast retracting steps, vial throwing lab assistants, flying birds, moving platforms and iron spikes?Crash Bandicoot N. Play the first-ever NEW level built for the original trilogy's gameplay in almost 20 years. Drawing inspiration from the cut `Waterfall Level` from the first Crash Bandicoot game, Future Tense features several puzzles from the original level set in the futuristic setting from Crash Bandicoot 3: Warped. Discover a whole new level of difficulty for Crash Bandicoot N. Sane Trilogy as you dodge rockets, destroy robots and leaps lasers while ascending a massive futuristic skyscraper.",
     image:
       "https://images.g2a.com/newlayout/323x433/1x1x0/d36ccffca82f/5b3ca576ae653a80b5390f53",
     price: 29.99,
     category: "adventure",
-    id_tags: "",
+    // id_tags: "",
   },
 ];
 async function insertGames() {
