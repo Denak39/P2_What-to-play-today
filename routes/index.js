@@ -9,9 +9,9 @@ router.get("/", function (req, res, next) {
 });
 
 // GET recommendation page
-app.get("/recommendation", (req, res) => {
+router.get("/recommendation", (req, res) => {
   res.render("recommendation", {
-      pageTitile: "Recommendation"
+    pageTitle: "Recommendation",
   });
 });
 
