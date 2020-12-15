@@ -1,22 +1,57 @@
 <h1>SETTINGS / SIGN IN</h1>
 <img id="sign-out" src="/images/Settings-Page-Icons/Sign-out.png" alt="Sign-out-icon">
-<form method="post" action="/dashboard/label/create" enctype="multipart/form-data" class="form">
-    <label class="label" for="username">username</label>
-    <input class="input" id="username" type="text" value="username" name="username">
-    <label class="label" for="password"></label>
-    <input class="input" id="password" type="text" value="password" name="password">
-    <label class="label" for="country">country</label>
-    <input class="input" id="country" type="text" value="fake country" name="country">
-    <label class="label" for="street">street</label>
-    <input class="input" id="street" type="text" value="fake street" name="street">
-    <label class="label" for="street-number">street number</label>
-    <input class="input" id="street-number" type="number" value="123" name="streetNumber">
-    <label class="label" for="zipcode">zipcode</label>
-    <input class="input" id="zipcode" type="text" value="75018" name="zipcode">
-    <label class="label" for="logo">
-        <span>label's logo</span>
-        <i class="icon fas fa-cloud-upload-alt fa-2x"></i>
-    </label>
-    <input class="is-hidden" id="logo" type="file" name="logo">
-    <button class="btn">create</button>
+<form action="/recommendation" class="form">
+    <label class="label" for="username">Username</label>
+    <input class="input" id="username" type="text" value="Username" name="username">
+    <label class="label" for="password">Password</label>
+    <input class="input" id="password" type="password" value="Password" name="password">
+
+    <label class="label" for="platforms">Platforms</label>
+    <select class="input" id="platforms" name="platforms" value="platforms">
+        <option value="Xbox"><img src="/images/Settings-Page-Icons/Xbox.png" alt="Xbox Icon">Xbox</option>
+        <option value="PC"><img src="/images/Settings-Page-Icons/PC.png" alt="PC Icon">PC</option>
+        <option value="PS"><img src="/images/Settings-Page-Icons/PS.png" alt="PS Icon">PS</option>
+        <option value="Nintendo"><img src="/images/Settings-Page-Icons/Nintendo.png" alt="Nintendo Icon">Nintendo
+        </option>
+    </select>
+
+    <label class="label" for="favorite-genres">Favorite genres (Select three!)</label>
+    <select class="input" id="favorite-genres" name="favorite-genres" value="favorite-genres">
+        <option value="Moba">Moba</option>
+        <option value="FPS">FPS</option>
+        <option value="Action">Action</option>
+        <option value="RPG">RPG</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Shooter">Shooter</option>
+        <option value="Infiltration">Infiltration</option>
+        <option value="Horror">Horror</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Racing">Racing</option>
+    </select>
+    <select class="input" id="favorite-genres" name="favorite-genres" value="favorite-genres">
+        <option value="Moba">Moba</option>
+        <option value="FPS">FPS</option>
+        <option value="Action">Action</option>
+        <option value="RPG">RPG</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Shooter">Shooter</option>
+        <option value="Infiltration">Infiltration</option>
+        <option value="Horror">Horror</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Racing">Racing</option>
+    </select>
+    <select class="input" id="favorite-genres" name="favorite-genres" value="favorite-genres">
+        <option value="Moba">Moba</option>
+        <option value="FPS">FPS</option>
+        <option value="Action">Action</option>
+        <option value="RPG">RPG</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Shooter">Shooter</option>
+        <option value="Infiltration">Infiltration</option>
+        <option value="Horror">Horror</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Racing">Racing</option>
+    </select>
 </form>
+
+<button type="submit" class="sign-in" action="/games">Sign In</button>

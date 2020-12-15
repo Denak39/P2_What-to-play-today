@@ -1,97 +1,153 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
-  font-family: "Press Start 2P", cursive;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-image: url("/images/Main-Page-Icons/background.png");
-  background-repeat: no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
+    background-image: url("/images/Main-Page-Icons/background.png");
+    background-repeat: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
 
 img {
-  width: 20px;
+    width: 20px;
 }
 
 nav {
-  min-height: 10vh;
-  display: flex;
-  align-items: center;
-  margin: auto;
-  border: 2px solid black;
-  width: 100%;
-  background-color: rgb(175, 175, 175);
+    min-height: 10vh ;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    border: 2px solid black;
+    width: 100%;
+    background-color: rgb(175, 175, 175);
+
 }
 nav ul {
-  display: flex;
-  flex: 1 1 40rem;
-  justify-content: space-around;
-  align-items: center;
-  list-style-type: none;
+    display:flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
 }
 
 #navbar {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
 }
-.nav-left,
-.nav-right {
-  width: 30%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 5px;
-  margin: 5px;
+.nav-left, .nav-right {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
 }
 
 .nav-left img {
-  width: 65px;
-  margin: 0 20px 0 20px;
+    width: 65px;
+    margin: 0 20px 0 20px;
 }
 #navbar-links li {
-  flex-direction: column;
-  width: 90px;
-  margin: 0 5px 0 5px;
+    flex-direction: column;
+    width: 90px;
+    margin: 0 5px 0 5px;
 }
 
 #navbar-links {
-  flex-direction: row;
+    flex-direction: row;
 }
 
 a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
 
 a img {
-  width: 35px;
-  margin: 0 20px 0 20px;
+    width: 35px;
+    margin: 0 20px 0 20px;
 }
 
 /* Different Stuff*/
 
 h1 {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  margin-top: 5%;
-  font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+    font-size: 20px;
 }
 
 #sign-out {
-  width: 5%;
-  display: flex;
-  justify-content: flex-end;
+    width: 5%;
+    display: flex;
+    justify-content: flex-end;
 }
+
+/* Form Styles */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .form .input {
+    height: 32px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    width: 50%;
+  }
+  
+  .form .icon {
+    margin-bottom: 20px;
+  }
+  
+  .form .label {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .form .sign-in {
+    height: 32px;
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: whitesmoke;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .form .btn:hover, .sign-in {
+    background: whitesmoke;
+    color: black;
+    border: 1px solid;
+  }
+
+  .label, .input, .sign-in {
+    margin-left: 10%;
+  }
+
+  .input, .sign-in {
+    border-radius: 10px;
+    padding-left: 2%;
+  }
+
+  .sign-in {
+      height: 32px;
+      padding-right: 2%;
+  }

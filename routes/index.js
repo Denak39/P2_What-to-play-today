@@ -7,6 +7,13 @@ router.get("/", function (req, res, next) {
   res.render("home");
 });
 
+// GET recommendation page
+app.get("/recommendation", (req, res) => {
+  res.render("recommendation", {
+      pageTitile: "Recommendation"
+  });
+});
+
 router.get("/games", async (req, res, next) => {
   try {
     res.render("games", { games: await GameModel.find() });
