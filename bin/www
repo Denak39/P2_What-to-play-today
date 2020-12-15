@@ -84,7 +84,3 @@ function onListening() {
   var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
   debug("Listening on " + bind);
 }
-
-server.listen(process.env.PORT, () => {
-  console.log(`Listening on http://localhost:3009`);
-});

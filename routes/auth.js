@@ -11,7 +11,6 @@ router.post("/signup", async (req, res, next) => {
   try {
     const newUser = { ...req.body };
     const foundUser = await UserModel.findOne({ email: newUser.email });
-
     if (foundUser) {
       req.flash("warning", "Email already registered");
       res.redirect("/signup");
