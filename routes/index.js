@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+const GameModel = require("./../models/Game");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -13,6 +14,12 @@ router.get("/games", async (req, res, next) => {
   } catch (err) {
     next(err);
   }
+});
+
+router.get("/one-game/:id", async (req, res, next) => {
+  GameModel.findById(req.params.id)
+    .then((result) => res.render("one_game", { game: result }))
+    .catch(next);
 });
 
 module.exports = router;
