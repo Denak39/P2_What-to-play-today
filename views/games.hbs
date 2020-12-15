@@ -38,6 +38,7 @@
 
     {{!-- Price--}}
     <div class="slidecontainer">
+      <label for="myRange">Max price ($)</label>
       <input type="range" min="1" max="80" value="40" class="slider" id="myRange">
       <div>
         <p id="demo">Value: $</p>
@@ -63,13 +64,13 @@
     <p>Sorry, no games yet !</p>
     {{/unless}}
     <div id="products_grid" class="products-grid flexed-item">
-      <a id="add-a-game" href="/game_add"><i class="fas fa-plus"></i>
+      <a id="add-a-game" href="/game-add"><i class="fas fa-plus"></i>
         <p id="add-game">Add a game</p>
       </a>
       {{#each games}}
       <a href="/one-game/{{this._id}}" class="product-item-wrapper">
         <div class="product-img">
-          <img class="product-images" src="{{this.image}}" alt="{{this.name}} : what a nice pair of kicks">
+          <img class="product-images" src="{{this.image}}" alt="{{this.name}}">
         </div>
         <p class="product-name">{{this.name}}</p>
         <p class="product-cat">{{this.category}}</p>
