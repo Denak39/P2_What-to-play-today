@@ -1,0 +1,58 @@
+<div class="big-container manage-products-wrapper">
+  <h3 class="manage-products-title">Manage your games catalog</h3>
+  <table class="product-manage-table">
+    <thead>
+      <tr class="table-row">
+        <th class="table-head">Sneaker Image</th>
+        <th class="table-head">Sneaker Name</th>
+        <th class="table-head">Sneaker Ref</th>
+        <th class="table-head">Sneaker Price</th>
+        <th class="table-head">Edit</th>
+        <th class="table-head">Delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each games}}
+      <tr class="table-row">
+        <td class="table-division">
+          <div>
+            <img src="{{ this.image }}" alt="img" class="table-image" />
+          </div>
+        </td>
+        <td class="table-division">
+          <div>{{ this.name }}</div>
+        </td>
+        <td class="table-division">
+          <div>{{ this.platform }}</div>
+        </td>
+        <td class="table-division">
+          <div><span>$</span>{{ this.price }}</div>
+        </td>
+        <td class="table-division">
+          <a href="/game_edit/{{ this._id }}"
+            ><i
+              data-id-sneaker="{{ this._id }}"
+              class="fa fa-edit table-icon"
+            ></i
+          ></a>
+        </td>
+        <td class="table-division">
+          <a href="/game_manage/{{ this._id }}"
+            ><i
+              class="fa fa-trash table-icon"
+              data-id-sneaker="{{ this._id }}"
+              aria-hidden="true"
+            ></i
+          ></a>
+        </td>
+      </tr>
+      {{/each}}
+      {{#unless games}}
+      <tr>
+        <td colspan="6">sorry no games yet</td>
+      </tr>
+      {{/unless}}
+    </tbody>
+  </table>
+</div>

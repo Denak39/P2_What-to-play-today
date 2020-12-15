@@ -27,7 +27,7 @@
     {{!-- Platform--}}
     <div>
       <label class="label" for="platforms">Platforms</label>
-      <select class="input" id="platforms" name="platforms" value="platforms">
+      <select class="input" id="platforms" name="platform" value="platforms">
         <option value="Xbox"><img src="/images/Settings-Page-Icons/Xbox.png" alt="Xbox Icon">Xbox</option>
         <option value="PC"><img src="/images/Settings-Page-Icons/PC.png" alt="PC Icon">PC</option>
         <option value="PS"><img src="/images/Settings-Page-Icons/PS.png" alt="PS Icon">PS</option>
@@ -73,8 +73,15 @@
           <img class="product-images" src="{{this.image}}" alt="{{this.name}}">
         </div>
         <p class="product-name">{{this.name}}</p>
-        <p class="product-cat">{{this.category}}</p>
+        <p class="product-cat">
+        {{#each this.category}}
+                  {{this}}
+        {{/each}}
+        </p>
         <p class="product-price">${{this.price}}</p>
+        <p class="product-price">{{#each this.platform}}
+                  {{this}}
+        {{/each}}</p>
       </a> {{/each}}
     </div>
   </section>
