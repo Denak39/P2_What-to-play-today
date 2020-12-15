@@ -14,7 +14,7 @@ const games = [
     image:
       "https://media.senscritique.com/media/000017816998/source_big/Metal_Gear_Solid.png",
     price: 9.99,
-    category: "action, shooter, infiltration",
+    category: ["action", "shooter", "infiltration"],
     // id_tags: "",
   },
   {
@@ -25,7 +25,7 @@ const games = [
     image:
       "https://s1.gaming-cdn.com/images/products/4809/orig/animal-crossing-new-horizons-switch-cover.jpg",
     price: 59.99,
-    category: "RPG, adventure",
+    category: ["RPG", "adventure"],
     // id_tags: "",
   },
   {
@@ -35,7 +35,7 @@ const games = [
       "Cyberpunk 2077 is a science fiction game loosely based on the role-playing game Cyberpunk 2020.      The game is set in the year 2077 in a fictional futuristic metropolis Night City in California. In the world of the game, there are developed cybernetic augmentations that enhance people's strength, agility, and memory. The city is governed by corporations. Many jobs are taken over by the robots, leaving a lot of people poor and homeless. Night City has a roaring underworld, with black markets, underground surgeons, drug dealers, and street gangs abound. The main protagonist is fully customizable, including his or her sex and appearance, and goes by the nickname V. He or she is an underground mercenary who does `dirty business` for the various contractors. An NPC companion named Jackie joins the protagonist early at the game, and various other companions may join the player on certain missions as the plot demands. However, the game has no parties and no companion system. The player controls V from the first person view, with the third-person view used for cutscenes only. The protagonist can travel across the city on feet or using various vehicles, in a manner some observers compared to GTA series. There are many options for the character customization, including three character classes, and a variety of augmentations V can install to enhance his or her abilities.",
     image: "https://images.igdb.com/igdb/image/upload/t_1080p/co1rft.jpg",
     price: 69.99,
-    category: "action, shooter,infiltration, adventure, RPG",
+    category: ["action", "shooter", "infiltration", "adventure", "RPG"],
     // id_tags: "",
   },
   {
@@ -46,7 +46,7 @@ const games = [
     image:
       "https://flitcha.com/wp-content/uploads/2020/05/2b2a4aa095bd0eade2854c4b929642a9_390x400_1x-0.jpg",
     price: 39.99,
-    category: "action, adventure",
+    category: ["action", "adventure"],
     // id_tags: "",
   },
   {
@@ -56,7 +56,7 @@ const games = [
       "Forza Horizon 4 is the eleventh game in the Forza franchise of racing games and the fourth in the Horizon subseries. Forza Horizon 4 takes place in a shared open world that is loosely based on the United Kingdom. Up to 72 players can share a server at which they participate in races together. They can also purchase in-game homes, which allow the players to unlock faster cars and driver perks. The drivers are customizable up to their clothing and emotions.     Forza Horizon 4 has a dynamic change of weather and seasons that change on a weekly basis. The weather conditions are synchronized and shared by all players on the same server. The weather and seasons alter the environment and thus the gameplay. Conditions like snow, mud, and ice can influence not only the driving style but also which areas and routes are accessible during which season. Most notably, the players can drive on the ice when lakes and rivers freeze.      Forza Horizon 4 features more than 450 vehicles that are licensed by over one hundred car manufacturers. Among the few notable manufacturers that were not included because of licensing problems are Toyota and Lexus. Although the game is oriented towards online multiplayer gameplay, it also has a single player and local multiplayer modes. The game also introduces a level editor mode called Route Creator that allows the players to design and customize new routes.",
     image: "https://gameroom.lt/14052/forza-horizon-4.jpg",
     price: 59.99,
-    category: "racing",
+    category: ["racing"],
     // id_tags: "",
   },
   {
@@ -67,7 +67,7 @@ const games = [
     image:
       "https://images.g2a.com/newlayout/323x433/1x1x0/d36ccffca82f/5b3ca576ae653a80b5390f53",
     price: 29.99,
-    category: "adventure",
+    category: ["adventure"],
     // id_tags: "",
   },
 ];
