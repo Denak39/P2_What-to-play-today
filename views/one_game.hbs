@@ -1,16 +1,38 @@
 <div class="one-product-container">
-  <div class="sneak-info">
-    <div class="sneak-info-header">
-        <div class="sneak-img-container">
-    <img src="{{game.image}}" alt="img-game" class="sneak-img">
-  </div>
-      <h1 class="sneak-name">{{game.name}}</h1>
-      
-      <p class="sneak-description">{{game.description}}</p>
+  <div class="game-info">
+    {{!-- --}}
+    {{!--<div class="game-info-header">--}}
+
+    <div class="game-img-container">
+      <h1 class="game-name titles">{{game.name}}</h1>
+      <img src="{{game.image}}" alt="img-game" class="game-img">
     </div>
-    <div>{{game.platform}}</div>
-    <div>{{game.category}}</div>
-    <div>{{game.price}}</div>
-    <button>Add to favourite</button>
+
+    <div class="description">
+      <h1 class="game-description titles">DESCRIPTION</h1>
+      <p class="game-description description-text">{{game.description}}</p>
+    </div>
+    {{!-- </div>--}}
+
+    <div class="game-attributes">
+      <div class="game-platforms">
+        <p class="uppercase titles">Platforms</p>
+        <div>{{game.platform}}</div>
+      </div>
+      <div class="game-genres">
+        <p class="uppercase">Genre</p>
+        <div>{{game.category}}</div>
+      </div>
+      <div class="game-release">
+        <p class="uppercase">Released</p>
+        <div>2020</div>
+      </div>
+      <div class="game-price">
+        <p class="uppercase">Price</p>
+        <div>{{game.price}}</div>
+      </div>
+      <button>Add to my favourites</button>
+    </div>
+
   </div>
-  </div>
+</div>

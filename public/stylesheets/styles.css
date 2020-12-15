@@ -244,3 +244,44 @@ text-align: center;
     text-align: center;
     padding: 5px;
 }
+
+/* Game_add page */
+
+.one-product-container,.game-info {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 5% 0 5% 0;
+    text-align: center;
+}
+
+.game-name, .uppercase {
+    text-transform: uppercase;
+}
+
+.titles {
+    font-size: 25px;
+    margin-bottom: 4%;
+}
+
+.game-img-container, .description, .game-attributes {
+    width: 33%;
+}
+
+.game-img {
+    display: flex;
+    margin: 4% 0 0 4%;
+    width: 90%;
+    height: auto;
+}
+
+.description {
+    text-align: left;
+}
+
+.description-text {
+    font-size: 13px;
+    height: auto;
+}
