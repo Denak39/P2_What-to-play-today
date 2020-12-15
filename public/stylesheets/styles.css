@@ -108,3 +108,139 @@ text-align: center;
 #selection, #sign-in {
     width: 35%;
 }
+
+/* Games Page Styles */
+
+#game-h4 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+
+/* Games Page Search Filter Form */
+
+.slidecontainer {
+    width: 20%; /* Width of the outside container */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    border-radius: 5px;
+    /* background: #d3d3d3; */ /* Grey background */
+    background: rgb(175, 175, 175);
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    border-radius: 50%; 
+    background: #00ff08; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    border-radius: 50%;
+    background: #00ff08; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  /* Search div */
+  #search-div {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 4%;
+      color: white;
+  }
+
+  #search-div .input {
+      border-radius: 10px;
+      height: 25px;
+  }
+
+  .products-wrapper{
+      color: white;
+  }
+
+  #games, .products-wrapper, .products-infos, .products-title, .products-grid, .product-item-wrapper, .product-name, .product-cat, .product-price {
+      color: white;
+  }
+
+  .products-wrapper {
+      margin-top: 4%;
+  }
+  .products-grid {
+      display: flex;
+      flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     flex-wrap: wrap;
+
+  }
+
+  .product-item-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 33.333333%;
+      justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding: 5px;
+  }
+
+  .product-images {
+      width: 33%;
+      margin: 4% 0 4% 0;
+  }
+
+  .products-title {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 2%;
+  }
+
+  .product-name, .product-cat, .product-price {
+      padding-bottom: 2%;
+  }
+
+
+  /* Add a game (Games page <a> tag) */
+#add-a-game {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33.333333%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}

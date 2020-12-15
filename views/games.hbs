@@ -1,13 +1,53 @@
 {{!-- <div class="main-content-products flexed-item big-container"> --}}
-
+<section id="games">
   {{!-- CATEGORY --}}
-  <aside>
-    <h4>Game filter</h4>
+  <h4 id="game-h4">Search Filters</h4>
 
-  </aside>
+
+  {{!-- Search Filters Form--}}
+  <div id="search-div">
+    <div>
+      <form action="search" class="search-form">
+        {{!-- Genre--}}
+        <label class="label" for="games-favorite-genres">Genre</label>
+        <select class="input" placeholder="Genre" id="games-favorite-genres" name="games-favorite-genres"
+          value="games-favorite-genres">
+          <option value="FPS">FPS</option>
+          <option value="Action">Action</option>
+          <option value="RPG">RPG</option>
+          <option value="Fighting">Fighting</option>
+          <option value="Shooter">Shooter</option>
+          <option value="Infiltration">Infiltration</option>
+          <option value="Horror">Horror</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Racing">Racing</option>
+        </select>
+    </div>
+
+    {{!-- Platform--}}
+    <div>
+      <label class="label" for="platforms">Platforms</label>
+      <select class="input" id="platforms" name="platforms" value="platforms">
+        <option value="Xbox"><img src="/images/Settings-Page-Icons/Xbox.png" alt="Xbox Icon">Xbox</option>
+        <option value="PC"><img src="/images/Settings-Page-Icons/PC.png" alt="PC Icon">PC</option>
+        <option value="PS"><img src="/images/Settings-Page-Icons/PS.png" alt="PS Icon">PS</option>
+        <option value="Nintendo"><img src="/images/Settings-Page-Icons/Nintendo.png" alt="Nintendo Icon">Nintendo
+        </option>
+      </select>
+    </div>
+
+    {{!-- Price--}}
+    <div class="slidecontainer">
+      <input type="range" min="1" max="80" value="40" class="slider" id="myRange">
+      <div>
+        <p id="demo">Value: $</p>
+      </div>
+    </div>
+  </div>
+
 
   {{!-- PRODUCTS--}}
-<section class="products-wrapper">
+  <section class="products-wrapper">
     <div class="products-infos">
       <h4 class="products-title">
         {{#compare category "collection" operator="==="}}
@@ -16,25 +56,26 @@
         {{#compare category "collection" operator="!="}}
         {{category}}
         {{/compare}}
-        collection <span id="products_count" class="products-count">({{games.length}})</span>
+        Collection <span id="products_count" class="products-count">({{games.length}})</span>
       </h4>
-      <p class="products-subtitle">Prepare for your miles with the latest styles and colors of women’s running shoes.
-        Take advantage of signature a footwear technologies including Zoom, Flyknite, and find the
-        pairs running shoes that align with your running philosophy.</p>
     </div>
     {{#unless games}}
     <p>Sorry, no games yet !</p>
     {{/unless}}
     <div id="products_grid" class="products-grid flexed-item">
+      <a id="add-a-game" href="/game_add"><i class="fas fa-plus"></i>
+        <p id="add-game">Add a game</p>
+      </a>
       {{#each games}}
-<a href="/one-game/{{this._id}}" class="product-item-wrapper">
-    <div class="product-img">
-        <img src="{{this.image}}" alt="{{this.name}} : what a nice pair of kicks">
-    </div>
-    <p class="product-name">{{this.name}}</p>
-    <p class="product-cat">{{this.category}}</p>
-    <p class="product-price">${{this.price}}</p>
-</a>      {{/each}}
+      <a href="/one-game/{{this._id}}" class="product-item-wrapper">
+        <div class="product-img">
+          <img class="product-images" src="{{this.image}}" alt="{{this.name}} : what a nice pair of kicks">
+        </div>
+        <p class="product-name">{{this.name}}</p>
+        <p class="product-cat">{{this.category}}</p>
+        <p class="product-price">${{this.price}}</p>
+      </a> {{/each}}
     </div>
   </section>
-</div>
+  </div>
+</section>
