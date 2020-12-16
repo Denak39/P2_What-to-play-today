@@ -20,9 +20,18 @@
         <div class="nav-left">
           <a href="/"><img src="/images/Main-Page-Icons/console.png" alt="Console-Image" /></a>
           <a href="games">
-            <p>What do I play today, blin?!</p>
+            <p>What do I play today?</p>
           </a>
         </div>
+        
+                  {{#if isLoggedIn}}
+          <li class="nav-item animated-link nav-item-admin">
+            <a href="/game-add">Add game to the full collection</a>
+          </li>
+           <li class="nav-item animated-link nav-item-admin">
+            <a href="/games-manage">Manage games collection</a>
+          </li>
+          {{/if}}
                 {{#unless isLoggedIn}}
 
         <div class="nav-right">

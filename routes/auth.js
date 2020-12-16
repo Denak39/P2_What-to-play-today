@@ -1,5 +1,5 @@
 const express = require("express");
-const router = new express.Router();
+const router = express.Router();
 const UserModel = require("./../models/User");
 const bcrypt = require("bcrypt");
 const uploader = require("./../config/cloudinary");
@@ -56,7 +56,7 @@ router.post("/signin", async (req, res, next) => {
 
 router.get("/logout", async (req, res, next) => {
   req.session.destroy(function (err) {
-    res.redirect("/signin");
+    res.redirect("/auth/signin");
   });
 });
 

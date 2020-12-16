@@ -3,9 +3,17 @@
         <h2>TOO MANY GAMES? NOT ENOUGH TIME?</h2>
         <h2>LET US CHOOSE FOR YOU!</h2>
         <button id="selection"><a href="/recommendation">TODAY'S SELECTION</a></button>
+                        {{#unless isLoggedIn}}
+
         <h2>NOT A MEMBER YET?</h2>
-        <button id="sign-in"><a href="/settings">SIGN-IN</a></button>
+        <button id="sign-in"><a href="/auth/signup">SIGN-IN</a></button>
+        {{/unless}}
+       
         <h2>VIEW ALL THE GAMES!</h2>
         <button id="selection"><a href="/games">Full collection</a></button>
+         {{#if isLoggedIn}}
+         <h2>View my playlist</h2>
+         <button id="selection"><a href="/playlist">My playlist</a></button>
+         {{/if}}
     </div>
 </section>
