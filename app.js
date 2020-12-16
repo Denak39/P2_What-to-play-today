@@ -25,6 +25,7 @@ const dev_mode = false; //change later
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const settingsRouter = require("./routes/settings");
+const playlistRouter = require("./routes/playlist");
 
 const app = express();
 
@@ -77,6 +78,7 @@ app.use("/", indexRouter);
 app.use("/", usersRouter);
 app.use("/auth", require("./routes/auth"));
 app.use("/", settingsRouter);
+app.use("/playlist", playlistRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

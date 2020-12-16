@@ -81,6 +81,14 @@ async function insertGames() {
     console.error(err);
   }
 }
+// username; gamename
+// malek; jeu1
+// malek; jeu7
+// ilyes; jeu6
+// ilyes; jeu7
+// male; jeu 9
+// selectionner "malek"
+
 insertGames();
 // const tags = [
 //   {

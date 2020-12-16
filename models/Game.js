@@ -20,10 +20,6 @@ const gameSchema = new Schema({
     "adventure",
     "racing",
   ],
-  // id_tags: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: "Tag",
-  // },
 });
 
 const GameModel = mongoose.model("Game", gameSchema);
