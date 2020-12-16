@@ -61,7 +61,30 @@ router.get("/one-game/:id", async (req, res, next) => {
 router.get("/delete/:id", async function (req, res, next) {
   try {
     await GameModel.findByIdAndRemove(req.params.id);
-    res.redirect("/game_manage");
+    res.redirect("/games-manage");
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.get("/game_edit/:id", async function (req, res, next) {
+  try {
+    const games = await GameModel.findById(req.params.id);
+    console.log(req.params.id);
+    res.render("game_edit", games);
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.post("/game-edit/:id", async function (req, res, next) {
+  try {
+    const updatedOne = await GameModel.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.redirect("/games-manage");
   } catch (err) {
     next(err);
   }

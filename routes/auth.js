@@ -2,6 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const UserModel = require("./../models/User");
 const bcrypt = require("bcrypt");
+const uploader = require("./../config/cloudinary");
 
 router.get("/signup", (req, res) => {
   res.render("signup");

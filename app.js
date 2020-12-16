@@ -10,7 +10,7 @@ require("./helpers/hbs"); // utils for hbs templates
 //   "X-RawgAPI-Key": "41b366e5554b479eadd2ade97194736e",
 //   "Content-Type": "application/json",
 // };
-
+const flash = require("connect-flash");
 const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
@@ -18,6 +18,9 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const hbs = require("hbs");
 const mongoose = require("mongoose");
+const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
+
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const settingsRouter = require("./routes/settings");
@@ -45,10 +48,22 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
+
+app.use(flash());
+app.use(
+  session({
+    cookie: { maxAge: 60000 },
+    secret: "woot",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+app.use(require("./middlewares/exposeFlashMessage"));
+
 //routes
 app.use("/", indexRouter);
 app.use("/", usersRouter);
-app.use("/", require("./routes/auth"));
+app.use("/auth", require("./routes/auth"));
 app.use("/", settingsRouter);
 
 // catch 404 and forward to error handler

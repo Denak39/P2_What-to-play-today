@@ -23,6 +23,7 @@
             <p>What do I play today, blin?!</p>
           </a>
         </div>
+                {{#unless isLoggedIn}}
 
         <div class="nav-right">
           <ul id="navbar-links">
@@ -31,10 +32,17 @@
                 Sign In</a>
             </li>
             <li>
-              <a href="#"><img src="/images/Main-Page-Icons/Login.png" alt="Login-Icon" />
+              <a href="/auth/signin"><img src="/images/Main-Page-Icons/Login.png" alt="Login-Icon" />
                 Login</a>
             </li>
           </ul>
+                  {{/unless}}
+          {{#if isLoggedIn}}
+        <a  href="/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
+        <a  href="/auth/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
+          <span class="btn-text">Log out</span>
+        </a>
+        {{/if}}
         </div>
       </nav>
     </header>
