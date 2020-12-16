@@ -1,7 +1,13 @@
 <div class="big-container manage-products-wrapper">
   <h3 class="manage-products-title">Manage your games catalog</h3>
+
+  <form class="example" action="action_page.php">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+
   <table class="product-manage-table">
-    <thead>
+    <thead class="manage-thead">
       <tr class="table-row">
         <th class="table-head">Game Cover</th>
         <th class="table-head">Game Name</th>
@@ -30,21 +36,11 @@
           <div><span>$</span>{{ this.price }}</div>
         </td>
         <td class="table-division">
-          <a href="/game_edit/{{ this._id }}"
-            ><i
-              data-id-sneaker="{{ this._id }}"
-              class="fa fa-edit table-icon"
-            ></i
-          ></a>
+          <a href="/game_edit/{{ this._id }}"><i data-id-sneaker="{{ this._id }}" class="fa fa-edit table-icon"></i></a>
         </td>
         <td class="table-division">
-          <a href="/delete/{{ this._id }}"
-            ><i
-              class="fa fa-trash table-icon"
-              data-id-sneaker="{{ this._id }}"
-              aria-hidden="true"
-            ></i
-          ></a>
+          <a href="/delete/{{ this._id }}"><i class="fa fa-trash table-icon" data-id-sneaker="{{ this._id }}"
+              aria-hidden="true"></i></a>
         </td>
       </tr>
       {{/each}}

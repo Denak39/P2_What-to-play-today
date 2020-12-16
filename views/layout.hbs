@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/stylesheets/styles.css">
   <script type="module" src="/javascripts/styles-manager.js"></script>
   <script src="https://kit.fontawesome.com/a03fdcc63b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -23,7 +24,7 @@
             <p>What do I play today, blin?!</p>
           </a>
         </div>
-                {{#unless isLoggedIn}}
+        {{#unless isLoggedIn}}
 
         <div class="nav-right">
           <ul id="navbar-links">
@@ -36,13 +37,13 @@
                 Login</a>
             </li>
           </ul>
-                  {{/unless}}
+          {{/unless}}
           {{#if isLoggedIn}}
-        <a  href="/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
-        <a  href="/auth/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
-          <span class="btn-text">Log out</span>
-        </a>
-        {{/if}}
+          <a href="/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
+            <a href="/auth/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
+              <span class="btn-text">Log out</span>
+            </a>
+            {{/if}}
         </div>
       </nav>
     </header>
