@@ -375,5 +375,55 @@ text-align: center;
    visibility:visible;
   }
 
-  /* Today's recommendation */
+  /* Game add page */
 
+.form-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+    font-size: 25px;
+}
+
+.add-form {
+    color: white;
+    padding: 10%;
+    height: auto;
+    font-size: 20px;
+}
+
+.form-item-wrapper {
+    margin: 4%;
+}
+
+.form-item-wrapper input, select, .add-img {
+    border-radius: 10px;
+    height: 40px;
+    padding: 10px 5px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.add-to-collection-btn {
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+    margin: 8% 4% 4% 4%;
+}
+
+.add-to-collection-btn:hover {
+    background-color: black;
+    color: #00ff08;
+}
+
+.add-to-collection-btn i {
+    padding-left: 2px;
+    visibility:hidden;
+  }
+
+.add-to-collection-btn:hover i {
+   visibility:visible;
+  }

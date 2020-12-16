@@ -1,84 +1,59 @@
 <div class="big-container product-manage-wrapper flexed-item">
-  <form
-    action="/game-add"
-    method="post"
-    class="add-product-form"
-    enctype="multipart/form-data"
-  >
+  <form action="/game-add" method="post" class="add-product-form" enctype="multipart/form-data">
     {{#if msg}}
     <p class="msg {{ msg.status }}">{{ msg.txt }}</p>
     {{/if}}
     <h3 class="form-title">Add games to the collection</h3>
-    <div class="form-item-wrapper flexed-item">
-      <label for="game-name" class="label-name label">Game name</label>
-      <input
-        id="game-name"
-        type="text"
-        name="name"
-        class="input-text input"
-        placeholder="ex: Cyberpunk"
-      />
-    </div>
-    <div class="form-item-wrapper flexed-item">
-      <label for="platform" class="label-main-cat label">Platform</label>
-      <select name="platform" id="platform" class="select" required>
-        <option value="-1" disabled selected>Choose a platform</option>
-        <option value="Playstations">Playstations</option>
-        <option value="Xbox">Xbox</option>
-        <option value="PC">PC</option>
-        <option value="Switch">Switch</option>
-      </select>
-    </div>
-    <div class="form-item-wrapper flexed-item">
-      <label for="sneaker-descr" class="label-descr label">Description</label>
-      <input
-        id="sneaker-description"
-        type="text"
-        class="input-text input"
-        placeholder="ex: Best game of 2020"
-        name="description"
-      />
-    </div>
-    <div class="form-item-wrapper flexed-item">
-      <label for="sneaker-price" class="label-price label">Price ($)</label>
-      <input
-        id="sneaker-price"
-        type="number"
-        class="sneaker-price input"
-        name="price"
-        min="1"
-        value="69"
-      />
-    </div>
-    <div class="form-item-wrapper flexed-item">
-      <label for="sneaker-img" class="label-price label">Image</label>
-      <input
-        id="sneaker-img"
-        name="image"
-        type="file"
-        class="sneaker-price input"
-      />
-    </div>
-    <div class="form-item-wrapper flexed-item">
-      <label for="category" class="label-main-cat label">Main category</label>
-      <select name="category" id="category" class="select" required>
-        <option value="-1" disabled selected>Choose a category</option>
-        <option value="action">action</option>
-        <option value="RPG">RPG</option>
-        <option value="fighting">fighting</option>
-        <option value="shooter">shooter</option>
-        <option value="infiltration">infiltration</option>
-        <option value="horror">horror</option>
-        <option value="adventure">adventure</option>
-        <option value="racing">racing</option>
-      </select>
+
+    <div class="add-form">
+      <div class="form-item-wrapper flexed-item">
+        <label for="game-name" class="label-name label">Game name</label>
+        <input id="game-name" type="text" name="name" class="input-text input" placeholder="ex: Cyberpunk" />
+      </div>
+      <div class="form-item-wrapper flexed-item">
+        <label for="platform" class="label-main-cat label">Platform</label>
+        <select name="platform" id="platform" class="select" required>
+          <option value="-1" disabled selected>Choose a platform</option>
+          <option value="Playstations">Playstations</option>
+          <option value="Xbox">Xbox</option>
+          <option value="PC">PC</option>
+          <option value="Switch">Switch</option>
+        </select>
+      </div>
+      <div class="form-item-wrapper flexed-item">
+        <label for="sneaker-descr" class="label-descr label">Description</label>
+        <input id="game-description" type="text" class="input-text input" placeholder="ex: Best game of 2020"
+          name="description" />
+      </div>
+      <div class="form-item-wrapper flexed-item">
+        <label for="sneaker-price" class="label-price label">Price ($)</label>
+        <input id="sneaker-price" type="number" class="sneaker-price input" name="price" min="1" value="69" />
+      </div>
+      <div class="form-item-wrapper flexed-item">
+        <label for="sneaker-img" class="label-price label">Image</label>
+        <input id="add-img" name="image" type="file" class="sneaker-price input" />
+      </div>
+      <div class="form-item-wrapper flexed-item">
+        <label for="category" class="label-main-cat label">Main category</label>
+        <select name="category" id="category" class="select" required>
+          <option value="-1" disabled selected>Choose a category</option>
+          <option value="action">action</option>
+          <option value="RPG">RPG</option>
+          <option value="fighting">fighting</option>
+          <option value="shooter">shooter</option>
+          <option value="infiltration">infiltration</option>
+          <option value="horror">horror</option>
+          <option value="adventure">adventure</option>
+          <option value="racing">racing</option>
+        </select>
+      </div>
+      <button class="button-primary add-to-collection-btn">Add to collection <i class="fas fa-plus-square"></i></button>
     </div>
 
     <!-- <div class="form-item-wrapper flexed-item">
       <label for="tags" class="label">Tags</label>
       {{!-- {{> form_tags_select}} --}}
     </div> -->
-    <button class="button-primary add-sneaker-btn">Add to collection</button>
   </form>
 
   <!-- {{!--
