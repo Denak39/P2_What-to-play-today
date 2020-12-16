@@ -329,7 +329,8 @@ text-align: center;
     text-align: center;
     border-radius: 10px;
     padding: 10px 5px 10px 5px;
- margin-left: 75%;
+    margin-top: 15%;
+    margin-left: 25%;
 }
 
 .add-to-favs-btn:hover {
@@ -346,5 +347,83 @@ text-align: center;
   }
 
 .add-to-favs-btn:hover img {
+   visibility:visible;
+  }
+
+  /* Redirecting to game_manage page button */
+
+.edit-btn {
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 5px 10px 5px;
+    margin-top: 15%;
+    margin-left: 43%;
+}
+
+.edit-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.edit-btn i {
+    padding-left: 2px;
+    visibility:hidden;
+  }
+
+.edit-btn:hover i {
+   visibility:visible;
+  }
+
+  /* Game add page */
+
+.form-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+    font-size: 25px;
+}
+
+.add-form {
+    color: white;
+    padding: 10%;
+    height: auto;
+    font-size: 20px;
+}
+
+.form-item-wrapper {
+    margin: 4%;
+}
+
+.form-item-wrapper input, select, .add-img {
+    border-radius: 10px;
+    height: 40px;
+    padding: 10px 5px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.add-to-collection-btn {
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+    margin: 8% 4% 4% 4%;
+}
+
+.add-to-collection-btn:hover {
+    background-color: black;
+    color: #00ff08;
+}
+
+.add-to-collection-btn i {
+    padding-left: 2px;
+    visibility:hidden;
+  }
+
+.add-to-collection-btn:hover i {
    visibility:visible;
   }
