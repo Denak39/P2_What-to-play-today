@@ -22,7 +22,7 @@
       {{#each games}}
       <tr class="table-row">
         <td class="table-division">
-          <div>
+          <div class="space-reduce-div">
             <img src="{{ this.image }}" alt="img" class="table-image" />
           </div>
         </td>
@@ -35,10 +35,10 @@
         <td class="table-division">
           <div><span>$</span>{{ this.price }}</div>
         </td>
-        <td class="table-division">
+        <td class="table-division center-icon">
           <a href="/game_edit/{{ this._id }}"><i data-id-sneaker="{{ this._id }}" class="fa fa-edit table-icon"></i></a>
         </td>
-        <td class="table-division">
+        <td class="table-division center-icon">
           <a href="/delete/{{ this._id }}"><i class="fa fa-trash table-icon" data-id-sneaker="{{ this._id }}"
               aria-hidden="true"></i></a>
         </td>

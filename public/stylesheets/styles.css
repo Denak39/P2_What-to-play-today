@@ -218,6 +218,17 @@ text-align: center;
      padding: 5px;
   }
 
+  .product-item-wrapper:hover {
+      background-color: black;
+      border-radius: 10px;
+      border: 1px solid #00ff08;
+      box-shadow: 0 0 10px #00ff08;
+  }
+
+  #add-a-game:hover {
+      color: #00ff08;
+  }
+
   .product-images {
       width: 33%;
       margin: 4% 0 4% 0;
@@ -460,16 +471,22 @@ text-align: center;
 }
 
 .manage-products-wrapper td, th { 
-/*padding: 10px;*/
-padding: 8px;
-text-align: left;
-border-bottom: 1px solid #ddd;
+    /*padding: 10px;*/
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    height: 100px;
+}
 
+.manage-products-wrapper .center-icon {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .manage-products-wrapper tr:hover {
-background-color: black;
-color: #00ff08;
+    background-color: black;
+    color: #00ff08;
 }
 
 .manage-products-wrapper tr:hover i {
@@ -478,8 +495,8 @@ color: #00ff08;
     }
 
 .manage-products-wrapper img {
-width: 10%;
-height: auto;
+    width: 20%;
+    height: auto;
 }
 
 /* Seach bar for game_manage page */
@@ -524,3 +541,10 @@ form.example input[type=text] {
     clear: both;
     display: table;
   }
+
+  /* Edit Game Page */
+
+
+
+
+  /* Login Page */
