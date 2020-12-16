@@ -58,4 +58,13 @@ router.get("/one-game/:id", async (req, res, next) => {
     .catch(next);
 });
 
+router.get("/delete/:id", async function (req, res, next) {
+  try {
+    await GameModel.findByIdAndRemove(req.params.id);
+    res.redirect("/game_manage");
+  } catch (err) {
+    next(err);
+  }
+});
+
 module.exports = router;
