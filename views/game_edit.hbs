@@ -1,4 +1,4 @@
-<div class="big-container product-manage-wrapper flexed-item">
+<div class="big-container product-manage-wrapper flexed-item edit-container">
   <form method="post" action="/game-edit/{{_id}}" class="edit-product-form">
     <h3 class="form-title"> Edit Game</h3>
     <div class="form-item-wrapper flexed-item">
@@ -18,8 +18,8 @@
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneaker-descr" class="label-descr label">Description</label>
-      <input id="sneaker-descr" type="text" name="description" class="input-text input edit-input" placeholder="#"
-        value="{{description}}">
+      <textarea id="game-descr" type="text" name="description" class="input-text input edit-input"
+        placeholder="{{description}}" value="{{description}}">{{description}}</textarea>
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneaker-price" class="label-price label">Price</label>

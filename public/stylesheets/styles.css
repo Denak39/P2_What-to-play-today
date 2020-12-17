@@ -340,9 +340,14 @@ text-align: center;
     display: flex;
     text-align: center;
     border-radius: 10px;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 0 10px 0px;
     margin-top: 15%;
-    margin-left: 25%;
+   
+    border: 1px solid grey;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .add-to-favs-btn:hover {
@@ -350,15 +355,12 @@ text-align: center;
     color: white;
 }
 
-.fav {
-    width: 15px;
-}
-
-.add-to-favs-btn img {
+.add-to-favs-btn i {
     visibility:hidden;
+    color: red;
   }
 
-.add-to-favs-btn:hover img {
+.add-to-favs-btn:hover i {
    visibility:visible;
   }
 
@@ -729,18 +731,33 @@ form.example input[type=text] {
   /* Edit Game Page */
 
   .edit-product-form {
-      color: white;
-  }
+    color: white;
+}
 
-  .edit-game-page-btn {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 5% 0 5% 4%;
-  }
+.edit-game-page-btn {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 5% 0 5% 4%;
+}
 
-  .edit-input {
-      
-  }
+.edit-input {
+    width: 100%;
+}
 
+#game-descr {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  line-height: 120%;
+}
+
+.edit-product-form label {
+    margin-bottom: 1%;
+}
   /* Playlist Page */
