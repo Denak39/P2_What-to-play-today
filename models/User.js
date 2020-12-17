@@ -6,6 +6,7 @@ const userSchema = new Schema({
   lastname: String,
   email: { type: String, unique: true },
   password: String,
+  favorites: [{type:Schema.Types.ObjectId, ref:"Game"}]
 });
 
 const UserModel = mongoose.model("User", userSchema);

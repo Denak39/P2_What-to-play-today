@@ -16,6 +16,7 @@
 
 
   <section id="section-nav">
+  
     <header>
       <nav id="navbar">
         <div class="nav-left">
@@ -32,6 +33,7 @@
            <li class="nav-item animated-link nav-item-admin">
             <a href="/games-manage">Manage games collection</a>
           </li>
+              <p>username:{{currentUser.name}}</p>
           {{/if}}
                 {{#unless isLoggedIn}}
 

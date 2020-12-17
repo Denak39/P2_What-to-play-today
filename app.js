@@ -78,7 +78,7 @@ app.use("/", indexRouter);
 app.use("/", usersRouter);
 app.use("/auth", require("./routes/auth"));
 app.use("/", settingsRouter);
-app.use("/playlist", playlistRouter);
+app.use("/", playlistRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
