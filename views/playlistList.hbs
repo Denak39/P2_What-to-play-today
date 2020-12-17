@@ -4,6 +4,7 @@
     <a href="/playlist-add" class="create-playlist">Create Playlist</a>
   </div>
    {{#each playlist}}
+  <a href="/one-playlist/{{this._id}}" class="product-item-wrapper"><div class="product-img">
         <p class="product-name">{{this.name}}</p>
         <p class="product-cat">
           {{#each this.category}}
@@ -12,6 +13,7 @@
         </p>
         <p class="product-cat">{{this.platform}}</p>
                 <p class="product-price">{{this.description}}</p>
+                </a>
       {{/each}}
   </div>
   </div>
