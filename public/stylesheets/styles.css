@@ -798,15 +798,16 @@ form.example input[type=text] {
   }
 
   .playlist-wrapper {
-      margin-top: 5%;
-      width: 90%;  
+    margin-top: 5%;
+    width: 90%;  
   }
 
-  .playlist-wrapper:hover {
+  .playlist-border:hover {
     background-color: black;
+
   }
 
-  .playlist-wrapper:hover p {
+  .playlist-border:hover p {
     color: #00ff08;
   }
 
