@@ -1,9 +1,14 @@
 {{!-- <a href="/userplaylist/{{this._id}}" class="product-item-wrapper">
 <p>user 1 </p></a> --}}
-<a href="/playlist-add">create playlist</a>
-
- {{#each users}}
-      <a href="/userplaylist/{{this._id}}" class="product-item-wrapper">
-        <p class="product-name">{{this.name}}</p>
-      </a> 
-      {{/each}}
+<div class="playlist-page">
+  <div class="playlist-create-div">
+    <a href="/playlist-add" class="create-playlist">Create Playlist</a>
+  </div>
+  <div class="playlist-wrapper">
+    {{#each users}}
+    <a href="/userplaylist/{{this._id}}" class="playlist-name"> {{!--product-item-wrapper--}}
+      <p class="product-name">{{this.name}}</p>
+    </a>
+    {{/each}}
+  </div>
+</div>

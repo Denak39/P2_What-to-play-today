@@ -448,7 +448,6 @@ text-align: center;
 }
 
   /* Game Manage Page */
-
 .manage-products-wrapper, .manage-products-wrapper i {
     color: white;
 }
@@ -499,7 +498,7 @@ text-align: center;
 .manage-products-wrapper tr:hover i {
     background-color: black;
     color: #00ff08;
-    }
+}
 
 .manage-products-wrapper img {
     width: 20%;
@@ -765,4 +764,64 @@ form.example input[type=text] {
 .edit-product-form label {
     margin-bottom: 1%;
 }
-  /* Playlist Page */
+  /* Playlist Page (playlist.hbs)*/
+
+  .playlist-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+  .create-playlist {
+    color: grey;
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 10px;
+    padding: 10px 5px 10px 5px;
+    background-color: #00ff08;
+    text-align: center;
+    width: 90%;
+  }
+
+  .create-playlist:hover {
+    box-shadow: 0 0 10px black;
+    background-color: black;
+    border: 1px solid black;
+  }
+
+  .playlist-create-div {
+    margin-top: 5%;
+    width: 90%;
+  }
+
+  .playlist-wrapper {
+      margin-top: 5%;
+      width: 90%;   
+      border-bottom: 1px solid white;
+      
+  }
+
+  .playlist-wrapper:hover {
+    background-color: black;
+  }
+
+  .playlist-wrapper:hover p {
+    color: #00ff08;
+  }
+
+  .playlist-name p {
+    margin-top: 2%;
+  }
+
+
+  
+
+  /* Userplaylist Page (userplaylist.hbs)*/
+
+
+  /* Playlist Add Page (playlist_add.hbs)*/
+
+
