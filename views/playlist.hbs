@@ -6,9 +6,11 @@
   </div>
   <div class="playlist-wrapper">
     {{#each users}}
-    <a href="/userplaylist/{{this._id}}" class="playlist-name"> {{!--product-item-wrapper--}}
-      <p class="product-name">{{this.name}}</p>
-    </a>
+    <div class="playlist-border">
+      <a href="/userplaylist/{{this._id}}" class="playlist-name"> {{!--product-item-wrapper--}}
+        <p class="product-name">{{this.name}}</p>
+      </a>
+    </div>
     {{/each}}
   </div>
 </div>

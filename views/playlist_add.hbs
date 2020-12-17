@@ -7,11 +7,12 @@
     <div class="add-form">
       <div class="form-item-wrapper flexed-item">
         <label for="playlist-name" class="label-name label">Playlist name</label>
-        <input id="game-name" type="text" name="name" class="input-text input" placeholder="ex: Best RPG games for PS4" />
-      </div>  
+        <input id="game-name" type="text" name="name" class="input-text input playlist-input"
+          placeholder="ex: Best RPG games for PS4" />
+      </div>
       <div class="form-item-wrapper flexed-item">
         <label for="platform" class="label-main-cat label">Platform</label>
-        <select name="platform" id="platform" class="select" required>
+        <select name="platform" id="platform" class="select playlist-input" required>
           <option value="-1" disabled selected>Choose a platform</option>
           <option value="Playstations">Playstations</option>
           <option value="Xbox">Xbox</option>
@@ -21,7 +22,7 @@
       </div>
       <div class="form-item-wrapper flexed-item">
         <label for="category" class="label-main-cat label">Main category</label>
-        <select name="category" id="category" class="select" required>
+        <select name="category" id="category" class="select playlist-input" required>
           <option value="-1" disabled selected>Choose a category</option>
           <option value="action">action</option>
           <option value="RPG">RPG</option>
@@ -35,10 +36,10 @@
       </div>
       <div class="form-item-wrapper flexed-item">
         <label for="sneaker-descr" class="label-descr label">Description</label>
-        <input id="game-description" type="text" class="input-text input" placeholder="ex: Countless hours to be poured into these games"
-          name="description" />
+        <textarea id="game-descr" type="text" class="input-text input playlist-input"
+          placeholder="ex: Countless hours to be poured into these games" name="description"></textarea>
       </div>
-      
+
       <button class="button-primary add-to-collection-btn">Add to playlists <i class="fas fa-plus-square"></i></button>
     </div>
   </form>

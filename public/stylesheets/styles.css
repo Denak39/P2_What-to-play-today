@@ -745,7 +745,7 @@ form.example input[type=text] {
   margin: 5% 0 5% 4%;
 }
 
-.edit-input {
+.edit-input, .playlist-input {
     width: 100%;
 }
 
@@ -799,9 +799,7 @@ form.example input[type=text] {
 
   .playlist-wrapper {
       margin-top: 5%;
-      width: 90%;   
-      border-bottom: 1px solid white;
-      
+      width: 90%;  
   }
 
   .playlist-wrapper:hover {
@@ -812,16 +810,63 @@ form.example input[type=text] {
     color: #00ff08;
   }
 
+  .playlist-border {
+    border-bottom: 1px solid white
+  }
+
   .playlist-name p {
     margin-top: 2%;
   }
 
 
-  
-
   /* Userplaylist Page (userplaylist.hbs)*/
 
+  /*
+  #products_grid_user_playlist {
+    display: flex;
+    
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+    position: relative;
+    vertical-align: middle;
+    width: 40%;
+   
+  }
+
+  #products_grid_user_playlist>div {
+    flex: 0 50%;
+    width: 30%;
+    height: auto;
+    font-size: 10px;
+    line-height: 20px;
+    justify-content: space-around;
+  }
+  */
+
+  .products-grid {
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   flex-wrap: wrap;
+}
+
+.product-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33.333333%;
+    justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 5px;
+   width: 100%; /**/
+}
 
   /* Playlist Add Page (playlist_add.hbs)*/
+
 
 

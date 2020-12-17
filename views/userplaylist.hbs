@@ -1,41 +1,52 @@
-      <a href="#" class="product-item-wrapper">
-<p>{{this.users}} playlist </p></a>
+<a href="#" class="product-item-wrapper">
+  <p>{{this.users}} Playlist </p>
+</a>
 
 <section id="games">
 
-  <section class="products-wrapper">
+  <section>
+    <div class="products-wrapper">
       <h4 class="products-title">
-            <div class="products-infos">
+        <div class="userplaylist-div">
+          <div class="products-infos">
 
-        {{#compare category "favorite" operator="==="}}
-        Whole
-        {{/compare}}
-        {{#compare category "favorite" operator="!="}}
-        {{category}}
-        {{/compare}}
-        Favorites <span id="products_count" class="products-count">({{favorites.length}})</span>
+            {{#compare category "favorite" operator="==="}}
+            Whole
+            {{/compare}}
+            {{#compare category "favorite" operator="!="}}
+            {{category}}
+            {{/compare}}
+            Favorites <span id="products_count" class="products-count">({{favorites.length}})</span>
       </h4>
-      </div>
-          {{#unless favorites}}
+    </div>
+    {{#unless favorites}}
     <p>Sorry, no games yet !</p>
     {{/unless}}
-{{#each favorites}}
-    <div id="products_grid" class="products-grid flexed-item">
 
-      <a href="/one-game/{{this._id}}" class="product-item-wrapper">
-        <div class="product-img">
-          <img class="product-images" src="{{this.image}}" alt="{{this.name}}">
+    <div class="products-grid">
+      {{#each favorites}}
+      <div id="products_grid_user_playlist" class="product-item-wrapper flexed-item">
+
+        <div class="user-favs">
+          <a href="/one-game/{{this._id}}" class="product-item-wrapper">
+            <div class="product-img">
+              <img class="product-images" src="{{this.image}}" alt="{{this.name}}">
+            </div>
+            <p class="product-name">{{this.name}}</p>
+            <p class="product-cat">
+              {{#each this.category}}
+              {{this}}
+              {{/each}}
+            </p>
+            <p class="product-price">${{this.price}}</p>
+            <p class="product-cat">{{this.platform}}</p>
+          </a>
         </div>
-        <p class="product-name">{{this.name}}</p>
-        <p class="product-cat">
-          {{#each this.category}}
-          {{this}}
-          {{/each}}
-        </p>
-        <p class="product-price">${{this.price}}</p>
-        <p class="product-cat">{{this.platform}}</p>
-      </a>
       </div>
       {{/each}}
-      </section>
+    </div>
+
+    </div>
+    </div>
+  </section>
 </section>
