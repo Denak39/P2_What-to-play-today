@@ -1,3 +1,9 @@
-<a href="/userplaylist/{{this._id}}" class="product-item-wrapper">
-<p>user 1 </p></a>
-<a href="/userplaylist">create playlist</a>
+{{!-- <a href="/userplaylist/{{this._id}}" class="product-item-wrapper">
+<p>user 1 </p></a> --}}
+<a href="/playlist-add">create playlist</a>
+
+ {{#each users}}
+      <a href="/userplaylist/{{this._id}}" class="product-item-wrapper">
+        <p class="product-name">{{this.name}}</p>
+      </a> 
+      {{/each}}
