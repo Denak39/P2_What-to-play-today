@@ -431,6 +431,7 @@ text-align: center;
 .add-to-collection-btn:hover {
     background-color: black;
     color: #00ff08;
+    box-shadow: 0 0 10px #00ff08;
 }
 
 .add-to-collection-btn i {
@@ -441,6 +442,10 @@ text-align: center;
 .add-to-collection-btn:hover i {
    visibility:visible;
   }
+
+.add-input {
+    width: 100%;
+}
 
   /* Game Manage Page */
 

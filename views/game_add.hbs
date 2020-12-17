@@ -3,16 +3,16 @@
     {{#if msg}}
     <p class="msg {{ msg.status }}">{{ msg.txt }}</p>
     {{/if}}
-    <h3 class="form-title">Add games to the collection</h3>
+    <h3 class="form-title text-shadow-pop-top">Add games to the collection</h3>
 
     <div class="add-form">
       <div class="form-item-wrapper flexed-item">
         <label for="game-name" class="label-name label">Game name</label>
-        <input id="game-name" type="text" name="name" class="input-text input" placeholder="ex: Cyberpunk" />
+        <input id="game-name" type="text" name="name" class="input-text input add-input" placeholder="ex: Cyberpunk" />
       </div>
       <div class="form-item-wrapper flexed-item">
         <label for="platform" class="label-main-cat label">Platform</label>
-        <select name="platform" id="platform" class="select" required>
+        <select name="platform" id="platform" class="select add-input" required>
           <option value="-1" disabled selected>Choose a platform</option>
           <option value="Playstations">Playstations</option>
           <option value="Xbox">Xbox</option>
@@ -22,8 +22,8 @@
       </div>
       <div class="form-item-wrapper flexed-item">
         <label for="sneaker-descr" class="label-descr label">Description</label>
-        <input id="game-description" type="text" class="input-text input" placeholder="ex: Best game of 2020"
-          name="description" />
+        <textarea id="game-descr" type="text" class="input-text input" placeholder="ex: Best game of 2020"
+          name="description"></textarea>
       </div>
       <div class="form-item-wrapper flexed-item">
         <label for="sneaker-price" class="label-price label">Price ($)</label>
@@ -35,7 +35,7 @@
       </div>
       <div class="form-item-wrapper flexed-item">
         <label for="category" class="label-main-cat label">Main category</label>
-        <select name="category" id="category" class="select" required>
+        <select name="category" id="category" class="select add-input" required>
           <option value="-1" disabled selected>Choose a category</option>
           <option value="action">action</option>
           <option value="RPG">RPG</option>
