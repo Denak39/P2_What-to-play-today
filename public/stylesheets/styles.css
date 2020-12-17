@@ -205,7 +205,6 @@ text-align: center;
      align-items: center;
      text-align: center;
      flex-wrap: wrap;
-
   }
 
   .product-item-wrapper {
@@ -216,6 +215,7 @@ text-align: center;
      align-items: center;
      text-align: center;
      padding: 5px;
+     width: 100%; /**/
   }
 
   .product-item-wrapper:hover {
@@ -542,9 +542,205 @@ form.example input[type=text] {
     display: table;
   }
 
+
+  /* Login Page (Signin.hbs)*/
+
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #form_user {
+      font-family: 'Press Start 2P', cursive;
+      color: white;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 5%;
+
+  }
+
+ .form-sub-infos, .button-link-form {
+      color: white;
+  }
+
+  .form-sub-infos {
+      padding-bottom: 5%;
+  }
+
+  .button-primary {
+    display: flex;
+ 
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+    
+  }
+
+  #email {
+      margin-left: 3.5%;
+  }
+
+  #password {
+      margin-left: 3%;
+  }
+  
+  .no-account {
+      width: 35%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+  }
+
+  .btn-signup-page {
+    margin-top: 10%;
+    display: flex;
+
+    border-radius: 10px;
+    padding: 10px 5px 10px 5px;
+  }
+
+  .button-link-form {
+    color: black;
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 10px;
+    padding: 10px 5px 10px 5px;
+    background-color: white;
+    text-align: center;
+  }
+
+  .fa-dungeon {
+    padding-left: 5px;
+    width: 10%;
+  }
+
+  /*buttons hover*/
+
+  .btn-login:hover {
+    background-color: black;
+    color: #00ff08;
+}
+
+.button-link-form i {
+    visibility: hidden;
+}
+
+.button-link-form:hover i {
+    visibility: visible;
+    color: #00ff08;
+}
+
+.button-link-form:hover {
+    background-color: black;
+    color: #00ff08;
+}
+
+  .btn-login i {
+    visibility: hidden;
+}
+
+ .btn-login:hover i {
+    visibility: visible;
+    background-color: black;
+    color: #00ff08;
+    }
+
+/*Text shadow animation*/
+
+@-webkit-keyframes text-shadow-pop-top {
+    0% {
+      text-shadow: 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      text-shadow: 0 -1px #000000, 0 -2px #000000, 0 -3px #000000, 0 -4px #000000, 0 -5px #000000, 0 -6px #000000, 0 -7px #000000, 0 -8px #000000;
+      -webkit-transform: translateY(8px);
+              transform: translateY(8px);
+    }
+  }
+  @keyframes text-shadow-pop-top {
+    0% {
+      text-shadow: 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      text-shadow: 0 -1px #000000, 0 -2px #000000, 0 -3px #000000, 0 -4px #000000, 0 -5px #000000, 0 -6px #000000, 0 -7px #000000, 0 -8px #000000;
+      -webkit-transform: translateY(8px);
+              transform: translateY(8px);
+    }
+  }
+  
+
+.text-shadow-pop-top {
+	-webkit-animation: text-shadow-pop-top 0.6s both;
+	        animation: text-shadow-pop-top 0.6s both;
+}
+
+  /* Signup Page (Signup.hbs) */
+
+.form-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.names {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20%;
+    height: auto;
+}
+
+.firstname-signup {
+    padding-bottom: 10%;
+}
+
+/* + Edit game btn hover */
+.btn-signup:hover, .edit-game-page-btn:hover {
+    background-color: black;
+    color: #00ff08;
+    box-shadow: 0 0 10px #00ff08;
+}
+
+.has-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+.signin-signup-page:hover {
+    box-shadow: 0 0 10px #00ff08;
+}
+
   /* Edit Game Page */
 
+  .edit-product-form {
+      color: white;
+  }
 
+  .edit-game-page-btn {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5% 0 5% 4%;
+  }
 
+  .edit-input {
+      
+  }
 
-  /* Login Page */
+  /* Playlist Page */
