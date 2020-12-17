@@ -1,0 +1,17 @@
+  <div class="playlist-page">
+
+  <div class="playlist-create-div">
+    <a href="/playlist-add" class="create-playlist">Create Playlist</a>
+  </div>
+   {{#each playlist}}
+        <p class="product-name">{{this.name}}</p>
+        <p class="product-cat">
+          {{#each this.category}}
+          {{this}}
+          {{/each}}
+        </p>
+        <p class="product-cat">{{this.platform}}</p>
+                <p class="product-price">{{this.description}}</p>
+      {{/each}}
+  </div>
+  </div>

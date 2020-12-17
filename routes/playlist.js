@@ -18,17 +18,24 @@ router.get("/playlist", protectRoute, async (req, res, next) => {
     next(err);
   }
 });
+router.get("/playlistList", protectRoute, async (req, res, next) => {
+  try {
+    res.render("playlistList", { playlist: await LibraryModel.find() });
+  } catch (err) {
+    next(err);
+  }
+});
 
 router.get("/playlist-add", (req, res) => {
   res.render("playlist_add");
 });
 
 router.post("/playlist-add", protectRoute, async (req, res, next) => {
-  const newGame = { ...req.body };
-  console.log(newGame);
+  const newPlaylist = { ...req.body };
+  console.log(newPlaylist);
   try {
-    await GameModel.create(newGame);
-    res.redirect("/games");
+    await LibraryModel.create(newPlaylist);
+    res.redirect("/playlistList");
   } catch (err) {
     next(err);
   }
