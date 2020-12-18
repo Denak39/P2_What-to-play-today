@@ -68,13 +68,20 @@ router.get("/add-to-favorite/:id", protectRoute, async (req, res, next) => {
     })
     .catch(next);
 });
+router.get("/playlistList/:id", (req, res, next) => {
+  UserModel.findById(req.params.id)
+    .populate("playlists")
+    .then((userFromDb) => {
+      res.render("playlistList", { playlists: userFromDb.playlists });
+    })
+    .catch(next);
+});
 
 router.get("/add-to-playlist/:id", protectRoute, async (req, res, next) => {
   const gameId = req.params.id;
   const playlistId = req.session.currentUser._id;
-
-  LibraryModel.findByIdAndUpdate(playlistId, {
-    $addToSet: { Library: gameId },
+  UserModel.findByIdAndUpdate(playlistId, {
+    $addToSet: { playlists: gameId },
   })
     .then(() => {
       res.redirect("/playlistList");

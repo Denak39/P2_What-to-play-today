@@ -14,6 +14,13 @@
       <a href="/add-to-favorite/{{game._id}}" class="add-to-favs-btn">Add to my favorites<i
           class="fas fa-heart"></i></a>
       <a href="/add-to-playlist/{{game._id}}" class="add-to-play-btn">Add to playlist<i class="fas fa-gamepad"></i></a>
+       <label for="category" class="label-main-cat label"></label>
+        <select name="category" id="category" class="select playlist-input" required>
+          <option value="-1" disabled selected>Add to playlist<i class="fas fa-heart"></i></option>
+          {{#each playlist}}
+           <a href="/add-to-playlist/{{game._id}}" class="add-to-favs-btn"><option value="{{this.name}}">{{this.name}}</option></a>
+          {{/each}}
+        </select>
       <form style="display: inline" action="/games-manage" method="get">
         <button class="edit-btn">Edit <i class="fas fa-edit"></i></button>
       </form>

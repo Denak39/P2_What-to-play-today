@@ -3,6 +3,7 @@ const router = new express.Router();
 const GameModel = require("./../models/Game");
 const uploader = require("./../config/cloudinary");
 const protectAdminRoute = require("./../middlewares/protectPrivateRoute");
+const LibraryModel = require("./../models/Library");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -57,9 +58,13 @@ router.get("/games-manage", protectAdminRoute, (req, res, next) => {
     .catch(next);
 });
 
-router.get("/one-game/:id", protectAdminRoute, async (req, res, next) => {
+router.get("/one-game/:id", protectAdminRoute, (req, res, next) => {
   GameModel.findById(req.params.id)
-    .then((result) => res.render("one_game", { game: result }))
+    .then(async (result) => {
+      const playlistId = await LibraryModel.find();
+      console.log(playlistId);
+      res.render("one_game", { game: result, playlist: playlistId });
+    })
     .catch(next);
 });
 
