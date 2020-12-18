@@ -4,36 +4,41 @@
     {{!--<div class="game-info-header">--}}
 
     <div class="game-img-container">
-      <h1 class="game-name titles">{{game.name}}</h1>
+      <h1 class="one-game-title game-name titles">{{game.name}}</h1>
       <img src="{{game.image}}" alt="img-game" class="game-img">
     </div>
 
     <div class="description">
       <h1 class="game-description titles">DESCRIPTION</h1>
       <p class="game-description description-text">{{game.description}}</p>
-      <a href="/add-to-favorite/{{game._id}}" class="add-to-favs-btn">Add to my favorites<i class="fas fa-heart"></i></a>
-      <a href="/add-to-playlist/{{game._id}}" class="add-to-favs-btn">Add to playlist<i class="fas fa-heart"></i></a>
+      <a href="/add-to-favorite/{{game._id}}" class="add-to-favs-btn">Add to my favorites<i
+          class="fas fa-heart"></i></a>
+      <a href="/add-to-playlist/{{game._id}}" class="add-to-play-btn">Add to playlist<i class="fas fa-gamepad"></i></a>
       <form style="display: inline" action="/games-manage" method="get">
         <button class="edit-btn">Edit <i class="fas fa-edit"></i></button>
       </form>
     </div>
     {{!-- </div>--}}
     <div class="game-attributes">
-      <div class="game-platforms">
+      <div class="game-platforms game-platforms-div">
         <p class="uppercase">Platforms</p>
         <div>{{game.platform}}</div>
+        <hr class="white-line">
       </div>
-      <div class="game-genres">
+      <div class="game-genres game-genres-div">
         <p class="uppercase">Genre</p>
         <div>{{game.category}}</div>
+        <hr class="white-line">
       </div>
-      <div class="game-release">
+      <div class="game-release game-release-div">
         <p class="uppercase">Released</p>
         <div>2020</div>
+        <hr class="white-line">
       </div>
-      <div class="game-price">
+      <div class="game-price game-price-div">
         <p class="uppercase">Price</p>
         <div>{{game.price}}</div>
+        <hr class="white-line">
       </div>
     </div>
 

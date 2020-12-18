@@ -96,6 +96,36 @@ text-align: center;
     margin: 5% 0 5% 0;
 }
 
+.color-change-3x:hover {
+	-webkit-animation: color-change-3x 4s linear infinite alternate both;
+	        animation: color-change-3x 4s linear infinite alternate both;
+}
+
+@-webkit-keyframes color-change-3x {
+    0% {
+      background: #19dcea;
+    }
+    50% {
+      background: #b22cff;
+    }
+    100% {
+      background: #ea2222;
+    }
+  }
+  @keyframes color-change-3x {
+    0% {
+      background: #19dcea;
+    }
+    50% {
+      background: #b22cff;
+    }
+    100% {
+      background: #ea2222;
+    }
+  }
+  
+
+
 #main button {
     padding: 10px 5px 10px 5px;
     border-radius: 10px;
@@ -336,7 +366,7 @@ text-align: center;
     justify-content: space-around;
 }
 
-.add-to-favs-btn {
+.add-to-favs-btn, .add-to-play-btn {
     display: flex;
     text-align: center;
     border-radius: 10px;
@@ -350,7 +380,7 @@ text-align: center;
     align-items: center;
 }
 
-.add-to-favs-btn:hover {
+.add-to-favs-btn:hover, .add-to-play-btn:hover {
     background-color: black;
     color: white;
 }
@@ -360,9 +390,19 @@ text-align: center;
     color: red;
   }
 
-.add-to-favs-btn:hover i {
+.add-to-favs-btn:hover i, .add-to-play-btn:hover i  {
    visibility:visible;
   }
+
+.add-to-play-btn i {
+    visibility: hidden;
+    color: lime;
+}
+
+.white-line {
+    color: white;
+    width: 90%;
+}
 
   /* Redirecting to game_manage page button */
 

@@ -133,7 +133,7 @@ h1 {
   }
   
   .form .btn:hover, .sign-in {
-    background: whitesmoke;
+    background: white;
     color: black;
     border: 1px solid;
   }
